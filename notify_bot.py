@@ -36,4 +36,4 @@ def notify():
 
 if __name__ == '__main__':  # Đúng cú pháp
     port = int(os.getenv("PORT", 8080))  # Lấy PORT từ biến môi trường
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=PORT)
