@@ -33,7 +33,8 @@ def notify():
     send_telegram_message(f"🔔 Thông báo mới: {message}")
     
     return {"status": "success", "message": "Notification sent"}, 200
+import os
 
 if __name__ == '__main__':  # Đúng cú pháp
     port = int(os.getenv("PORT", 8080))  # Lấy PORT từ biến môi trường
-    app.run(host="0.0.0.0", port=PORT)
+    app.run(host="0.0.0.0", port=port)
