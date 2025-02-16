@@ -1,0 +1,1 @@
+workder: python notify_bot.py
