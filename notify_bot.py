@@ -1,10 +1,9 @@
 from flask import Flask, request
 import requests
-import os  # Import thư viện để đọc biến môi trường
+import os  
 
 app = Flask(__name__)
 
-# Đọc TELEGRAM_BOT_TOKEN và CHAT_ID từ biến môi trường
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
@@ -35,5 +34,6 @@ def notify():
     
     return {"status": "success", "message": "Notification sent"}, 200
 
-if __name__ == '_main_':  # Sửa lỗi name -> _name_
-    app.run(host="0.0.0.0", port=8080)
+if __name__ == '__main__':  # Đúng cú pháp
+    port = int(os.getenv("PORT", 8080))  # Lấy PORT từ biến môi trường
+    app.run(host="0.0.0.0", port=port)
