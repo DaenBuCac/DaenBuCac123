@@ -36,4 +36,4 @@ def notify():
     return {"status": "success", "message": "Notification sent"}, 200
 
 if __name__ == '_main_':  # Sửa lỗi name -> _name_
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=8080)
